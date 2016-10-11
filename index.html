@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="Booker">
+
+    <section ng-controller="getdat">
+        <input type='text' id="nameBox" ng-model="name" placeholder="Your Unique Identifier">
+        <ul>
+            <li ng-repeat="element in books">
+                <h4>{{element.book}}</h4>
+                <button ng-click="getdat(element.title)" id="getdatbook">GIMME DAT</button>
+            </li>
+        </ul>
+    </section>
+
+    <section ng-controller="Lender">
+        <input type='text' placeholder="SEND HELP">
+        <button>SEARCH</button>
+        <div>
+        </div>
+    </section>
+
+</body>
+
+</html>
